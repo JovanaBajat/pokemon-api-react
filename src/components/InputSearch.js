@@ -23,7 +23,7 @@ updateValue = (e) => {
   render() {
     return (
       <form>
-        <input type="text"
+        <input type="text" required
           onChange={this.handleInputChange}
           value={this.state.inputValue}/>
         <button onClick={this.updateValue}>Search Pokemon</button>

@@ -12,9 +12,11 @@ class DisplayPokemon extends Component {
   componentWillReceiveProps(nextProps){
     request(`https://pokeapi.co/api/v2/pokemon-form/${nextProps.num}`,  (err, res, body) => {
       if(err) console.log(err)
-      console.log(body)
+      // console.log(body)
+      // console.log(JSON.parse(body))
       this.setState({
         display : JSON.parse(body)
+
       });
       console.log(this.state.display);
     });
